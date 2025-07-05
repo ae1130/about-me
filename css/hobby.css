@@ -1,0 +1,565 @@
+/* 趣味紹介ページ専用CSS */
+
+/* リセットCSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 基本スタイル */
+body {
+    font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
+    line-height: 1.6;
+    color: #1a1818;
+    background: linear-gradient(135deg, #eaf6fd 0%, #f7c6bd 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* ヘッダー */
+header {
+    background: linear-gradient(135deg, #eaf6fd 0%, #f7c6bd 100%);
+    color: #333;
+    text-align: center;
+    padding: 2rem;
+}
+
+header h1 {
+    font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+/* ナビゲーション */
+.navigation {
+    margin-top: 2rem;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.navigation li {
+    margin: 0;
+}
+
+.navigation a {
+    color: #333;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+    font-weight: 500;
+    border: 2px solid transparent;
+}
+
+.navigation a:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-color: #667eea;
+}
+
+.navigation a.active {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+}
+
+.navigation a.active:hover {
+    background: #764ba2;
+    border-color: #764ba2;
+}
+
+/* メインコンテンツ */
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+section h2 {
+    font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
+    color: #667eea;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 0.5rem;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+/* 趣味紹介セクション */
+.hobby-intro {
+    text-align: center;
+    background: linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+}
+
+.hobby-intro h2 {
+    border: none;
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+}
+
+.hobby-intro p {
+    font-size: 1.2rem;
+    color: #6c757d;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+}
+
+/* 趣味セクション */
+.hobby-section {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.hobby-section:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* 趣味画像 */
+.hobby-image {
+    flex: 0 0 150px;
+    text-align: center;
+}
+
+.hobby-placeholder {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 4rem;
+    margin: 0 auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.hobby-placeholder:hover {
+    transform: scale(1.1) rotate(10deg);
+}
+
+/* 趣味別の色分け */
+.hobby-placeholder.bread {
+    background: linear-gradient(135deg, #fab1a0 0%, #e17055 100%);
+}
+
+.hobby-placeholder.travel {
+    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+}
+
+.hobby-placeholder.diamond {
+    background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);
+}
+
+/* 趣味情報 */
+.hobby-info {
+    flex: 1;
+}
+
+.hobby-info h2 {
+    color: #2d3436;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #667eea;
+}
+
+.hobby-details {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+}
+
+.hobby-details p {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    letter-spacing: 0.3px;
+}
+
+.hobby-details strong {
+    font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
+    color: #667eea;
+    display: inline-block;
+    width: 120px;
+    font-weight: 600;
+}
+
+.hobby-description {
+    background: linear-gradient(145deg, #eaf6fd 0%, #f7c6bd 100%);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border-left: 5px solid #667eea;
+}
+
+.hobby-description p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #2d3436;
+    letter-spacing: 0.3px;
+}
+
+/* 学びセクション */
+.learning-section {
+    background: linear-gradient(145deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 3rem;
+    border-radius: 20px;
+    margin-bottom: 3rem;
+}
+
+.learning-section h2 {
+    color: white;
+    border-color: white;
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.learning-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.learning-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.learning-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.learning-item h3 {
+    font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.learning-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* 将来の趣味セクション */
+.future-section {
+    text-align: center;
+    background: linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.future-section h2 {
+    border: none;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.future-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.future-list li {
+    font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: transform 0.3s ease;
+}
+
+.future-list li:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* フッター */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* ===== アニメーション ===== */
+
+/* キーフレーム定義 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* アニメーションクラス */
+.animate-container {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-header {
+    animation: slideInDown 1s ease-out 0.2s both;
+}
+
+.animate-intro {
+    animation: fadeInScale 0.8s ease-out 0.4s both;
+}
+
+.animate-hobby-1 {
+    animation: fadeInLeft 0.8s ease-out 0.6s both;
+}
+
+.animate-hobby-2 {
+    animation: fadeInRight 0.8s ease-out 0.8s both;
+}
+
+.animate-hobby-3 {
+    animation: fadeInLeft 0.8s ease-out 1s both;
+}
+
+.animate-learning {
+    animation: fadeInScale 0.8s ease-out 1.2s both;
+}
+
+.animate-future {
+    animation: fadeInUp 0.8s ease-out 1.4s both;
+}
+
+.animate-footer {
+    animation: fadeInUp 0.8s ease-out 1.6s both;
+}
+
+/* 学習アイテムの個別アニメーション */
+.learning-item {
+    opacity: 0;
+    animation: bounceIn 0.6s ease-out both;
+}
+
+.learning-item:nth-child(1) { animation-delay: 1.4s; }
+.learning-item:nth-child(2) { animation-delay: 1.5s; }
+.learning-item:nth-child(3) { animation-delay: 1.6s; }
+.learning-item:nth-child(4) { animation-delay: 1.7s; }
+
+/* 将来の趣味リストのアニメーション */
+.future-list li {
+    opacity: 0;
+    animation: fadeInScale 0.5s ease-out both;
+}
+
+.future-list li:nth-child(1) { animation-delay: 1.6s; }
+.future-list li:nth-child(2) { animation-delay: 1.7s; }
+.future-list li:nth-child(3) { animation-delay: 1.8s; }
+.future-list li:nth-child(4) { animation-delay: 1.9s; }
+.future-list li:nth-child(5) { animation-delay: 2s; }
+
+/* 初期状態 */
+.animate-header,
+.animate-intro,
+.animate-hobby-1,
+.animate-hobby-2,
+.animate-hobby-3,
+.animate-learning,
+.animate-future,
+.animate-footer {
+    opacity: 0;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        border-radius: 0;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .navigation ul {
+        gap: 1rem;
+    }
+    
+    .navigation a {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .hobby-section {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .hobby-image {
+        flex: none;
+        align-self: center;
+    }
+    
+    .hobby-placeholder {
+        width: 120px;
+        height: 120px;
+        font-size: 3rem;
+    }
+    
+    main {
+        padding: 1.5rem;
+    }
+    
+    section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .hobby-details strong {
+        width: auto;
+        display: block;
+        margin-bottom: 0.2rem;
+    }
+    
+    .learning-content {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1.5rem;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .navigation ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .navigation a {
+        width: 100%;
+        text-align: center;
+    }
+    
+    main {
+        padding: 1rem;
+    }
+    
+    .future-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .future-list li {
+        width: 100%;
+        text-align: center;
+    }
+}

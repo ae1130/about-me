@@ -1,13 +1,81 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>自己紹介</title> 
+        <meta name="description" content="自己紹介ページです。">
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="container animate-container">
+            <header class="animate-header">
+                <h1>/about</h1>
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="index.html" class="active">自己紹介</a></li>
+                        <li><a href="dogs.html">犬紹介</a></li>
+                        <li><a href="hobby.html">趣味紹介</a></li>
+                        <li><a href="trip.html">旅行紹介</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+            </header>
+            
+            <main>
+                <section class="profile-section animate-profile">
+                    <div class="profile-image animate-image">
+                        <div class="profile-placeholder">
+                            <span>写真</span>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-info animate-info">
+                        <h2>profile</h2>
+                        <p><strong>major:</strong>ホワイトハッカー専攻</p>
+                        <p><strong>name:</strong> 江口綾華</p>
+                        <p><strong>age:</strong> 18歳</p>  
+                        <p><strong>hobby:</strong> パン作りと旅行</p>
+                    </div>
+                </section>
+                
+                <section class="about-section animate-about">
+                    <h2>self-introduction</h2>
+                    <p>こんにちは！私は江口綾華です。</p>
+                    <p>現在18歳で、ホワイトハッカー専攻で勉強しています。趣味はパン作りと旅行で、新しい技術を学ぶことが大好きです。将来はサイバーセキュリティの分野で活躍したいと思っています。</p>
+                </section>
+                
+                <section class="skills-section animate-skills">
+                    <h2>skill・interest</h2>
+                    <ul class="skills-list">
+                        <li>AI900</li>
+                        <li>HTML/CSS</li>
+                        <li>サイバーセキュリティ</li>
+                        <li>パン作り</li>
+                        <li>旅行</li>
+                        <li>水泳</li>
+                        <li>ピアノ</li>
+                        <li>茶道</li>
+                        <li>ダイヤモンドアート</li>
+                        <li>美術館巡り</li>
+                        <li>和菓子巡り</li>
+                        <li>映画鑑賞</li>
+                    </ul>
+                </section>
+                
+                <section class="contact-section animate-contact">
+                    <h2>contact address</h2>
+                    <div class="contact-info">
+                        <p><strong>Email:</strong> KTC25A31E0001@edu.kyoto-tech.ac.jp</p>
+                        <p><strong>SNS:</strong> [SNSアカウント]</p>
+                    </div>
+                </section>
+            </main>
+            
+            <footer class="animate-footer">
+                <p>&copy; 2025 Ayaka Eguchi. All rights reserved.</p>
+            </footer>
+        </div>
+    </body>
 </html>

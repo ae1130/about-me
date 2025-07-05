@@ -1,0 +1,573 @@
+/* お問い合わせページ専用CSS */
+
+/* リセットCSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 基本スタイル */
+body {
+    font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
+    line-height: 1.6;
+    color: #1a1818;
+    background: linear-gradient(135deg, #eaf6fd 0%, #f7c6bd 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* ヘッダー */
+header {
+    background: linear-gradient(135deg, #eaf6fd 0%, #f7c6bd 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+header h1 {
+    font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+/* ナビゲーション */
+.navigation {
+    margin-top: 2rem;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.navigation li {
+    margin: 0;
+}
+
+.navigation a {
+    font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
+    color: #333;
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+    font-weight: 500;
+    border: 2px solid transparent;
+    font-size: 0.9rem;
+    letter-spacing: 0.8px;
+    text-transform: capitalize;
+    backdrop-filter: blur(10px);
+}
+
+.navigation a:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-color: #f7c6bd;
+}
+
+.navigation a.active {
+    background: white;
+    color: black;
+}
+
+.navigation a.active:hover {
+    background: white;
+    border-color: #f7c6bd;
+}
+
+/* メインコンテンツ */
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+section h2 {
+    font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
+    color: #f7c6bd;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid #f7c6bd;
+    padding-bottom: 0.8rem;
+    letter-spacing: 1.2px;
+    text-transform: capitalize;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(135deg, #f7c6bd 100%);
+    border-radius: 2px;
+}
+
+/* お問い合わせ紹介セクション */
+.contact-intro {
+    text-align: center;
+    background: linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+}
+
+.contact-intro h2 {
+    border: none;
+    margin-bottom: 1.5rem;
+    font-size: 2.8rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 2px;
+}
+
+.contact-intro h2::after {
+    display: none;
+}
+
+.contact-intro p {
+    font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
+    font-size: 1.3rem;
+    color: #5a6c7d;
+    line-height: 2;
+    letter-spacing: 0.8px;
+    font-weight: 400;
+    text-align: justify;
+}
+
+/* お問い合わせフォーム */
+.contact-form-section {
+    background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 3rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #2d3436;
+    font-size: 1rem;
+}
+
+.required {
+    color: #e74c3c;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-submit {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.submit-btn {
+    font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+/* 連絡先情報セクション */
+.contact-info-section {
+    background: linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+}
+
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+}
+
+.contact-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.contact-item h3 {
+    font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
+    color: #667eea;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.contact-item p {
+    font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* よくある質問セクション */
+.faq-section {
+    background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 3rem;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.faq-item {
+    background: linear-gradient(145deg, #eaf6fd 0%, #f7c6bd 100%);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border-left: 5px solid #667eea;
+}
+
+.faq-item h3 {
+    font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
+    color: #2d3436;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.faq-item p {
+    font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #2d3436;
+}
+
+/* 注意事項セクション */
+.notice-section {
+    background: linear-gradient(145deg, #ffeaa7 0%, #fab1a0 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+}
+
+.notice-section h2 {
+    text-align: center;
+    color: #2d3436;
+    border: none;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.notice-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.notice-list li {
+    font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
+    background: rgba(255, 255, 255, 0.8);
+    color: #2d3436;
+    padding: 1rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: transform 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.notice-list li:hover {
+    transform: translateY(-3px) scale(1.02);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* フッター */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
+    font-size: 0.9rem;
+}
+
+/* ===== アニメーション ===== */
+
+/* キーフレーム定義 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* アニメーションクラス */
+.animate-container {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-header {
+    animation: slideInDown 1s ease-out 0.2s both;
+}
+
+.animate-intro {
+    animation: fadeInScale 0.8s ease-out 0.4s both;
+}
+
+.animate-form {
+    animation: fadeInLeft 0.8s ease-out 0.6s both;
+}
+
+.animate-info {
+    animation: fadeInRight 0.8s ease-out 0.8s both;
+}
+
+.animate-faq {
+    animation: fadeInScale 0.8s ease-out 1s both;
+}
+
+.animate-notice {
+    animation: fadeInUp 0.8s ease-out 1.2s both;
+}
+
+.animate-footer {
+    animation: fadeInUp 0.8s ease-out 1.4s both;
+}
+
+/* 初期状態 */
+.animate-header,
+.animate-intro,
+.animate-form,
+.animate-info,
+.animate-faq,
+.animate-notice,
+.animate-footer {
+    opacity: 0;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        border-radius: 0;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .navigation ul {
+        gap: 0.8rem;
+        flex-wrap: wrap;
+    }
+    
+    .navigation a {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    main {
+        padding: 1.5rem;
+    }
+    
+    section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .notice-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-intro h2 {
+        font-size: 2rem;
+    }
+    
+    .contact-intro p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1.5rem;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .navigation ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .navigation a {
+        width: 100%;
+        text-align: center;
+    }
+    
+    main {
+        padding: 1rem;
+    }
+    
+    .contact-intro,
+    .contact-form-section,
+    .contact-info-section,
+    .faq-section,
+    .notice-section {
+        padding: 1.5rem;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 0.8rem;
+    }
+    
+    .submit-btn {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+}
