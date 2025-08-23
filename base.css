@@ -1,0 +1,431 @@
+/* 共通ベースCSS - 全ページで使用 */
+
+/* リセットCSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 基本スタイル */
+body {
+    font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
+    line-height: 1.6;
+    color: #1a1818;
+    background: linear-gradient(135deg, #ffe8e8 0%, #fff2d1 100%);
+    min-height: 100vh;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 0 30px rgba(255, 154, 158, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* ヘッダー */
+header {
+    background: linear-gradient(135deg, #ffe4d6 0%, #ffd3e1 100%);
+    color: #8B4B8B;
+    text-align: center;
+    padding: 3rem 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+header h1 {
+    font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+/* ナビゲーション */
+.navigation {
+    margin-top: 2rem;
+    position: relative;
+    z-index: 5;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.navigation li {
+    margin: 0;
+}
+
+.navigation a {
+    color: #8B4B8B;
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+    font-weight: 500;
+    border: 2px solid transparent;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    touch-action: manipulation;
+    font-size: 0.9rem;
+    letter-spacing: 0.8px;
+    backdrop-filter: blur(10px);
+}
+
+.navigation a:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 154, 158, 0.2);
+    border-color: #ff9a9e;
+}
+
+.navigation a.active {
+    background: #ff9a9e;
+    color: white;
+    border-color: #ff9a9e;
+}
+
+.navigation a.active:hover {
+    background: #e8839b;
+    border-color: #e8839b;
+}
+
+/* メインコンテンツ */
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+section h2 {
+    color: #8B4B8B;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    letter-spacing: 1.2px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* フッター */
+footer {
+    background: linear-gradient(135deg, #f5b7c8 0%, #e8839b 100%);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* フォーカス表示の改善 */
+.navigation a:focus {
+    outline: 3px solid #ff9a9e;
+    outline-offset: 2px;
+}
+
+/* スクロールの改善 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 画像の最適化 */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===== レスポンシブデザイン ===== */
+
+/* タブレット・中サイズ画面 (768px - 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 90%;
+        margin: 15px auto;
+    }
+    
+    .navigation ul {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+    }
+    
+    .navigation a {
+        padding: 0.7rem 1.1rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* タブレット・小さい画面 (768px以下) */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        border-radius: 5px;
+        max-width: calc(100% - 20px);
+    }
+    
+    header {
+        padding: 1.8rem 1rem;
+    }
+    
+    header h1 {
+        font-size: 2.2rem;
+        letter-spacing: 1.5px;
+    }
+    
+    .navigation ul {
+        gap: 0.8rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .navigation a {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+        border-radius: 20px;
+    }
+    
+    main {
+        padding: 1.5rem;
+    }
+    
+    section {
+        margin-bottom: 2.5rem;
+    }
+    
+    section h2 {
+        font-size: 1.6rem;
+        margin-bottom: 1.2rem;
+    }
+}
+
+/* スマートフォン・小画面 (480px以下) */
+@media (max-width: 480px) {
+    .container {
+        margin: 5px;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    
+    header {
+        padding: 1.5rem 0.8rem;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+    
+    .navigation ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+    
+    .navigation a {
+        width: 100%;
+        max-width: 200px;
+        text-align: center;
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    main {
+        padding: 1rem;
+    }
+    
+    section {
+        margin-bottom: 2rem;
+    }
+    
+    section h2 {
+        font-size: 1.4rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    footer {
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* 超小画面・古いスマートフォン (360px以下) */
+@media (max-width: 360px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+    
+    .navigation a {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    main {
+        padding: 0.8rem;
+    }
+    
+    section h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* 大画面・デスクトップ (1200px以上) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 900px;
+    }
+    
+    header {
+        padding: 2.5rem;
+    }
+    
+    header h1 {
+        font-size: 3rem;
+        letter-spacing: 3px;
+    }
+    
+    .navigation ul {
+        gap: 2rem;
+    }
+    
+    .navigation a {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    main {
+        padding: 2.5rem;
+    }
+    
+    section h2 {
+        font-size: 2.2rem;
+    }
+}
+
+/* ===== タッチデバイス対応 ===== */
+
+/* タッチデバイスでのホバー効果を調整 */
+@media (hover: hover) {
+    .navigation a:hover {
+        background: rgba(255, 255, 255, 1);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        border-color: #ff9a9e;
+    }
+    
+    section h2:hover {
+        color: #764ba2;
+    }
+}
+
+/* タッチデバイス専用スタイル */
+@media (hover: none) {
+    .navigation a:active {
+        background: rgba(255, 255, 255, 1);
+        transform: scale(0.95);
+    }
+}
+
+/* 横向き表示時の対応 */
+@media (orientation: landscape) and (max-height: 500px) {
+    header {
+        padding: 1rem;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .navigation ul {
+        flex-direction: row;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+    
+    .navigation a {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.8rem;
+        min-height: 36px;
+    }
+    
+    main {
+        padding: 1rem;
+    }
+}
+
+/* ===== アクセシビリティ対応 ===== */
+
+/* プリント時の最適化 */
+@media print {
+    .container {
+        box-shadow: none;
+        margin: 0;
+        border-radius: 0;
+    }
+    
+    header {
+        background: none !important;
+        color: #000;
+    }
+    
+    .navigation {
+        display: none;
+    }
+}
+
+/* ハイコントラストモード対応 */
+@media (prefers-contrast: high) {
+    body {
+        background: #fff;
+    }
+    
+    .container {
+        border: 2px solid #000;
+    }
+    
+    header {
+        background: #000 !important;
+        color: #fff !important;
+    }
+    
+    .navigation a {
+        border: 2px solid #000;
+        background: #fff;
+        color: #000;
+    }
+    
+    .navigation a.active {
+        background: #000;
+        color: #fff;
+    }
+    
+    section h2 {
+        color: #000;
+        border-bottom-color: #000;
+    }
+}
+
+/* 縮小モーション設定（アクセシビリティ） */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

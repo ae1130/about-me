@@ -10,7 +10,7 @@ body {
     font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
     line-height: 1.6;
     color: #1a1818;
-    background: linear-gradient(135deg, #eaf6fd 0%, #f7c6bd 100%);
+    background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
     min-height: 100vh;
 }
 
@@ -27,7 +27,7 @@ body {
 
 /* ヘッダー */
 header {
-    background: linear-gradient(135deg, #eaf6fd 0%, #f7c6bd 100%);
+    background: linear-gradient(135deg, #ffd3e1 0%, #ffe4d6 100%);
     color: white;
     text-align: center;
     padding: 2rem;
@@ -74,19 +74,19 @@ header h1 {
 .navigation a:hover {
     background: rgba(255, 255, 255, 1);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    border-color: #667eea;
+    box-shadow: 0 5px 15px rgba(255, 154, 158, 0.3);
+    border-color: #ff9a9e;
 }
 
 .navigation a.active {
-    background: #667eea;
+    background: #ff9a9e;
     color: white;
-    border-color: #667eea;
+    border-color: #ff9a9e;
 }
 
 .navigation a.active:hover {
-    background: #764ba2;
-    border-color: #764ba2;
+    background: #ffa8cc;
+    border-color: #ffa8cc;
 }
 
 /* メインコンテンツ */
@@ -98,12 +98,442 @@ section {
     margin-bottom: 3rem;
 }
 
+/* 丸くて可愛いメニューグリッド */
+.navigation-section {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.navigation-section h2 {
+    font-size: 2rem;
+    color: #8B4B8B;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* 旅行マップセクション */
+.travel-map-section {
+    text-align: center;
+    padding: 2rem 0;
+    background: linear-gradient(135deg, #fff8f0 0%, #ffe8e8 100%);
+    border-radius: 20px;
+    margin-bottom: 3rem;
+    box-shadow: 0 10px 30px rgba(255, 154, 158, 0.15);
+}
+
+.travel-map-section h2 {
+    font-size: 2.5rem;
+    color: #8B4B8B;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.map-description {
+    font-size: 1.2rem;
+    color: #e8839b;
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.world-map {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* 世界地図背景 */
+.map-background {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(135deg, 
+        #e6f3ff 0%, 
+        #cce7ff 30%, 
+        #b3daff 60%, 
+        #99ccff 100%);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(153, 204, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+/* 大陸の輪郭 */
+.continent {
+    position: absolute;
+    border-radius: 10px;
+    opacity: 0.6;
+}
+
+.asia-continent {
+    top: 20%;
+    left: 55%;
+    width: 35%;
+    height: 50%;
+    background: linear-gradient(135deg, #f5d795 0%, #e6b85c 100%);
+    clip-path: polygon(0% 0%, 80% 0%, 100% 30%, 90% 80%, 60% 100%, 20% 90%, 0% 60%);
+}
+
+.europe-continent {
+    top: 10%;
+    left: 45%;
+    width: 15%;
+    height: 25%;
+    background: linear-gradient(135deg, #f4c2a1 0%, #e09c6f 100%);
+    clip-path: polygon(0% 20%, 70% 0%, 100% 40%, 80% 100%, 20% 90%);
+}
+
+.africa-continent {
+    top: 30%;
+    left: 40%;
+    width: 20%;
+    height: 40%;
+    background: linear-gradient(135deg, #f5b7c8 0%, #e8839b 100%);
+    clip-path: polygon(30% 0%, 70% 0%, 90% 30%, 100% 80%, 70% 100%, 20% 90%, 0% 60%, 10% 20%);
+}
+
+.australia-continent {
+    top: 70%;
+    left: 70%;
+    width: 15%;
+    height: 15%;
+    background: linear-gradient(135deg, #e8c5d4 0%, #d8a3b8 100%);
+    border-radius: 50%;
+}
+
+.america-continent {
+    top: 15%;
+    left: 10%;
+    width: 25%;
+    height: 60%;
+    background: linear-gradient(135deg, #f5e6a3 0%, #e6cc5c 100%);
+    clip-path: polygon(0% 10%, 40% 0%, 60% 20%, 80% 0%, 100% 15%, 90% 40%, 100% 70%, 70% 100%, 30% 90%, 0% 80%, 10% 50%);
+}
+
+/* マップピン */
+.map-pin {
+    position: absolute;
+    z-index: 10;
+    cursor: pointer;
+    transform: translateX(-50%) translateY(-100%);
+}
+
+.pin-marker {
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(255, 182, 193, 0.8) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 3px solid white;
+    animation: bounce 2s infinite;
+}
+
+.pin-marker:hover {
+    transform: scale(1.2);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-8px);
+    }
+    60% {
+        transform: translateY(-4px);
+    }
+}
+
+/* ピンのツールチップ */
+.pin-tooltip {
+    position: absolute;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    min-width: 180px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 182, 193, 0.3);
+}
+
+.pin-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 8px solid transparent;
+    border-top-color: rgba(255, 255, 255, 0.95);
+}
+
+.map-pin:hover .pin-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-10px);
+}
+
+.pin-tooltip h4 {
+    color: #8B4B8B;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.pin-tooltip p {
+    color: #e8839b;
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+
+.pin-tooltip a {
+    color: #ff9a9e;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.3rem 0.8rem;
+    border-radius: 10px;
+    background: rgba(255, 154, 158, 0.1);
+    transition: all 0.3s ease;
+}
+
+.pin-tooltip a:hover {
+    background: rgba(255, 154, 158, 0.2);
+    transform: scale(1.05);
+}
+
+/* 特定のピンの色分け */
+.hokkaido-pin .pin-marker {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(173, 216, 230, 0.8) 100%);
+}
+
+.okinawa-pin .pin-marker {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(255, 192, 203, 0.8) 100%);
+}
+
+.korea-pin .pin-marker {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(244, 194, 161, 0.8) 100%);
+}
+
+.thailand-pin .pin-marker {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(245, 215, 149, 0.8) 100%);
+}
+
+.travel-stats {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.7);
+    transition: transform 0.3s ease;
+    min-width: 100px;
+}
+
+.stat-item:hover {
+    transform: translateY(-3px);
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #8B4B8B;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #e8839b;
+    font-weight: 500;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.menu-item {
+    background: linear-gradient(135deg, #ffd3e1 0%, #ffa8cc 100%);
+    border-radius: 25px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(255, 168, 204, 0.3);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-item:nth-child(2) {
+    background: linear-gradient(135deg, #ffe4d6 0%, #ffb4a2 100%);
+    box-shadow: 0 8px 25px rgba(255, 180, 162, 0.3);
+}
+
+.menu-item:nth-child(3) {
+    background: linear-gradient(135deg, #fff2d1 0%, #ffcc8e 100%);
+    box-shadow: 0 8px 25px rgba(255, 204, 142, 0.3);
+}
+
+.menu-item:nth-child(4) {
+    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
+    box-shadow: 0 8px 25px rgba(248, 187, 217, 0.3);
+}
+
+.menu-item:nth-child(5) {
+    background: linear-gradient(135deg, #fff8e1 0%, #ffd54f 100%);
+    box-shadow: 0 8px 25px rgba(255, 213, 79, 0.3);
+}
+
+.menu-item:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.3) 0%, transparent 100%);
+    border-radius: 25px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-item:hover::before {
+    opacity: 1;
+}
+
+.menu-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.menu-item h3 a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.menu-item h3 a:hover {
+    transform: scale(1.1);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.menu-item p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0.5rem;
+    }
+    
+    .menu-item {
+        min-height: 150px;
+        padding: 1.5rem;
+    }
+    
+    .menu-item h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navigation-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .menu-item {
+        min-height: 120px;
+        padding: 1rem;
+    }
+    
+    .menu-item h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .menu-item p {
+        font-size: 0.9rem;
+    }
+}
+
 section h2 {
-    color: #99d6f9;
+    color: #8B4B8B;
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    border-bottom: 2px solid #99d6f9;
     padding-bottom: 0.5rem;
+}
+
+/* ウェルカムセクション */
+.welcome-section {
+    text-align: center;
+    background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    margin-bottom: 3rem;
+    box-shadow: 0 10px 30px rgba(255, 154, 158, 0.2);
+}
+
+.welcome-content h2 {
+    font-size: 3rem;
+    color: #8B4B8B;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 10px rgba(139, 75, 139, 0.15);
+}
+
+.welcome-content p {
+    font-size: 1.8rem;
+    color: #e8839b;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0;
+    text-shadow: 0 1px 5px rgba(232, 131, 155, 0.2);
 }
 
 /* プロフィールセクション */
@@ -123,7 +553,7 @@ section h2 {
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid #99d6f9;
+    border: 4px solid #f5b7c8;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -138,7 +568,7 @@ section h2 {
 }
 
 .profile-info strong {
-    color: #99d6f9;
+    color: #8B4B8B;
     display: inline-block;
     width: 80px;
 }
@@ -158,12 +588,58 @@ section h2 {
 }
 
 .skills-list li {
-    background: linear-gradient(135deg, #99d6f9 0%, #f7c6bd 100%);
+    background: linear-gradient(135deg, #ffd3e1 0%, #ffa8cc 100%);
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 25px;
     font-size: 0.9rem;
     font-weight: 500;
+    box-shadow: 0 4px 15px rgba(255, 168, 204, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.skills-list li:nth-child(2n) {
+    background: linear-gradient(135deg, #ffe4d6 0%, #ffb4a2 100%);
+    box-shadow: 0 4px 15px rgba(255, 180, 162, 0.3);
+}
+
+.skills-list li:nth-child(3n) {
+    background: linear-gradient(135deg, #fff2d1 0%, #ffcc8e 100%);
+    box-shadow: 0 4px 15px rgba(255, 204, 142, 0.3);
+}
+
+.skills-list li:nth-child(4n) {
+    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
+    box-shadow: 0 4px 15px rgba(248, 187, 217, 0.3);
+}
+
+.skills-list li:nth-child(5n) {
+    background: linear-gradient(135deg, #fff8e1 0%, #ffd54f 100%);
+    box-shadow: 0 4px 15px rgba(255, 213, 79, 0.3);
+}
+
+.skills-list li:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.skills-list li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 0%, transparent 100%);
+    border-radius: 25px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.skills-list li:hover::before {
+    opacity: 1;
 }
 
 /* 連絡先セクション */
@@ -173,14 +649,14 @@ section h2 {
 }
 
 .contact-info strong {
-    color: #99d6f9;
+    color: #8B4B8B;
     display: inline-block;
     width: 80px;
 }
 
 /* フッター */
 footer {
-    background: #333;
+    background: linear-gradient(135deg, #f5b7c8 0%, #e8839b 100%);
     color: white;
     text-align: center;
     padding: 1.5rem;
@@ -470,6 +946,47 @@ header h1 {
         margin-bottom: 1.2rem;
     }
     
+    /* ウェルカムセクションのタブレット対応 */
+    .welcome-section {
+        padding: 2.5rem 1.5rem;
+    }
+    
+    .welcome-content h2 {
+        font-size: 2.5rem;
+    }
+    
+    .welcome-content p {
+        font-size: 1.5rem;
+    }
+    
+    /* 旅行マップのタブレット対応 */
+    .world-map {
+        padding: 1rem;
+    }
+    
+    .map-background {
+        height: 400px;
+    }
+    
+    .pin-marker {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+    
+    .pin-tooltip {
+        min-width: 150px;
+        top: -100px;
+    }
+    
+    .travel-stats {
+        gap: 1.5rem;
+    }
+    
+    .stat-item {
+        min-width: 80px;
+    }
+    
     .profile-section {
         flex-direction: column;
         text-align: center;
@@ -581,6 +1098,75 @@ header h1 {
     
     section {
         margin-bottom: 2rem;
+    }
+    
+    /* ウェルカムセクションのレスポンシブ */
+    .welcome-section {
+        padding: 2rem 1rem;
+    }
+    
+    .welcome-content h2 {
+        font-size: 2rem;
+    }
+    
+    .welcome-content p {
+        font-size: 1.3rem;
+    }
+    
+    /* 旅行マップのスマートフォン対応 */
+    .travel-map-section {
+        padding: 1.5rem 1rem;
+    }
+    
+    .travel-map-section h2 {
+        font-size: 2rem;
+    }
+    
+    .map-description {
+        font-size: 1rem;
+    }
+    
+    .world-map {
+        padding: 0.5rem;
+    }
+    
+    .map-background {
+        height: 300px;
+    }
+    
+    .pin-marker {
+        width: 35px;
+        height: 35px;
+        font-size: 1.3rem;
+    }
+    
+    .pin-tooltip {
+        min-width: 130px;
+        top: -90px;
+        padding: 0.8rem;
+    }
+    
+    .pin-tooltip h4 {
+        font-size: 1rem;
+    }
+    
+    .pin-tooltip p {
+        font-size: 0.8rem;
+    }
+    
+    .pin-tooltip a {
+        font-size: 0.8rem;
+    }
+    
+    .travel-stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .stat-item {
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
     }
     
     section h2 {
@@ -755,7 +1341,7 @@ header h1 {
         background: rgba(255, 255, 255, 1);
         transform: translateY(-2px);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        border-color: #667eea;
+        border-color: #f5b7c8;
     }
     
     .profile-placeholder:hover {

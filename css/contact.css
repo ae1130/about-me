@@ -12,16 +12,16 @@ body {
     font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
     line-height: 1.6;
     color: #1a1818;
-    background: linear-gradient(135deg, #eaf6fd 0%, #f7c6bd 100%);
+    background: linear-gradient(135deg, #ffe8e8 0%, #fff2d1 100%);
     min-height: 100vh;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     background: white;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(255, 154, 158, 0.1);
+    border-radius: 20px;
     overflow: hidden;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -29,10 +29,10 @@ body {
 
 /* ヘッダー */
 header {
-    background: linear-gradient(135deg, #eaf6fd 0%, #f7c6bd 100%);
-    color: white;
+    background: linear-gradient(135deg, #ffe4d6 0%, #ffd3e1 100%);
+    color: #8B4B8B;
     text-align: center;
-    padding: 2rem;
+    padding: 3rem 2rem;
 }
 
 header h1 {
@@ -60,8 +60,7 @@ header h1 {
 }
 
 .navigation a {
-    font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
-    color: #333;
+    color: black;
     text-decoration: none;
     padding: 0.8rem 1.2rem;
     border-radius: 25px;
@@ -71,25 +70,25 @@ header h1 {
     border: 2px solid transparent;
     font-size: 0.9rem;
     letter-spacing: 0.8px;
-    text-transform: capitalize;
     backdrop-filter: blur(10px);
 }
 
 .navigation a:hover {
     background: rgba(255, 255, 255, 1);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    border-color: #f7c6bd;
+    box-shadow: 0 5px 15px rgba(255, 154, 158, 0.2);
+    border-color: #ff9a9e;
 }
 
 .navigation a.active {
-    background: white;
-    color: black;
+    background: #ff9a9e;
+    color: white;
+    border-color: #ff9a9e;
 }
 
 .navigation a.active:hover {
-    background: white;
-    border-color: #f7c6bd;
+    background: #ffa8cc;
+    border-color: #ffa8cc;
 }
 
 /* メインコンテンツ */
@@ -102,36 +101,23 @@ section {
 }
 
 section h2 {
-    font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
-    color: #f7c6bd;
+    color: #8B4B8B;
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
-    border-bottom: 3px solid #f7c6bd;
     padding-bottom: 0.8rem;
     letter-spacing: 1.2px;
-    text-transform: capitalize;
     position: relative;
-}
-
-section h2::after {
-    content: '';
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 60px;
-    height: 3px;
-    background: linear-gradient(135deg, #f7c6bd 100%);
-    border-radius: 2px;
 }
 
 /* お問い合わせ紹介セクション */
 .contact-intro {
     text-align: center;
-    background: linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%);
+    background: linear-gradient(145deg, #ffd3e1 0%, #ffe4d6 100%);
     padding: 2rem;
     border-radius: 15px;
     margin-bottom: 3rem;
+    box-shadow: 0 10px 25px rgba(255, 211, 225, 0.2);
 }
 
 .contact-intro h2 {
@@ -139,33 +125,24 @@ section h2::after {
     margin-bottom: 1.5rem;
     font-size: 2.8rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #8B4B8B;
     letter-spacing: 2px;
 }
 
-.contact-intro h2::after {
-    display: none;
-}
-
 .contact-intro p {
-    font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
     font-size: 1.3rem;
-    color: #5a6c7d;
+    color: #6B4B6B;
     line-height: 2;
     letter-spacing: 0.8px;
     font-weight: 400;
-    text-align: justify;
 }
 
 /* お問い合わせフォーム */
 .contact-form-section {
-    background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+    background: linear-gradient(145deg, #fff2d1 0%, #ffe8e8 100%);
     padding: 2rem;
     border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 25px rgba(255, 234, 209, 0.2);
     margin-bottom: 3rem;
 }
 
@@ -179,26 +156,24 @@ section h2::after {
 }
 
 .form-group label {
-    font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
-    color: #2d3436;
+    color: #8B4B8B;
     font-size: 1rem;
 }
 
 .required {
-    color: #e74c3c;
+    color: #e8839b;
     font-weight: 700;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
-    font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
     width: 100%;
     padding: 1rem;
-    border: 2px solid #e9ecef;
+    border: 2px solid #f5b7c8;
     border-radius: 10px;
     font-size: 1rem;
     transition: border-color 0.3s ease;
@@ -209,8 +184,8 @@ section h2::after {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #667eea;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    border-color: #ff9a9e;
+    box-shadow: 0 0 0 3px rgba(255, 154, 158, 0.1);
 }
 
 .form-group textarea {
@@ -224,8 +199,7 @@ section h2::after {
 }
 
 .submit-btn {
-    font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #f5b7c8 0%, #e8839b 100%);
     color: white;
     padding: 1rem 3rem;
     border: none;
@@ -235,20 +209,21 @@ section h2::after {
     cursor: pointer;
     transition: all 0.3s ease;
     letter-spacing: 1px;
-    text-transform: uppercase;
 }
 
 .submit-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 8px 20px rgba(245, 183, 200, 0.3);
+    background: linear-gradient(135deg, #e8839b 0%, #d8669a 100%);
 }
 
 /* 連絡先情報セクション */
 .contact-info-section {
-    background: linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%);
+    background: linear-gradient(145deg, #ffe4d6 0%, #ffd3e1 100%);
     padding: 2rem;
     border-radius: 15px;
     margin-bottom: 3rem;
+    box-shadow: 0 10px 25px rgba(255, 228, 214, 0.2);
 }
 
 .contact-info-grid {
@@ -263,7 +238,7 @@ section h2::after {
     padding: 1.5rem;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(255, 154, 158, 0.15);
     transition: transform 0.3s ease;
 }
 
@@ -272,22 +247,38 @@ section h2::after {
 }
 
 .contact-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 2rem;
+}
+
+.contact-item:nth-child(1) .contact-icon {
+    background: linear-gradient(135deg, #f5b7c8 0%, #e8839b 100%);
+}
+
+.contact-item:nth-child(2) .contact-icon {
+    background: linear-gradient(135deg, #f4c2a1 0%, #e09c6f 100%);
+}
+
+.contact-item:nth-child(3) .contact-icon {
+    background: linear-gradient(135deg, #f5d795 0%, #e6b85c 100%);
 }
 
 .contact-item h3 {
-    font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
-    color: #667eea;
+    color: #8B4B8B;
     font-size: 1.3rem;
     margin-bottom: 1rem;
     font-weight: 600;
 }
 
 .contact-item p {
-    font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
     font-size: 1rem;
-    color: #6c757d;
+    color: #6B4B6B;
     margin-bottom: 0.5rem;
     line-height: 1.6;
 }
@@ -372,11 +363,10 @@ section h2::after {
 
 /* フッター */
 footer {
-    background: #333;
+    background: linear-gradient(135deg, #f5b7c8 0%, #e8839b 100%);
     color: white;
     text-align: center;
     padding: 1.5rem;
-    font-family: 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif;
     font-size: 0.9rem;
 }
 
