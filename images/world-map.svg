@@ -1,0 +1,30 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#e6f3ff"/>
+  
+  <!-- Asia Continent (visited places) -->
+  <path d="M200 50 L600 50 L650 100 L700 150 L650 200 L550 180 L500 150 L450 120 L400 100 L350 80 L300 70 L250 80 L200 100 L200 50" fill="#f5d795" stroke="#d4a574" stroke-width="2"/>
+  
+  <!-- Pins for visited places -->
+  <!-- Hokkaido -->
+  <circle cx="620" cy="80" r="15" fill="#ff9a9e" stroke="white" stroke-width="3"/>
+  <text x="620" y="85" text-anchor="middle" font-size="18" fill="white">⛄</text>
+  
+  <!-- Okinawa -->
+  <circle cx="600" cy="220" r="15" fill="#ff9a9e" stroke="white" stroke-width="3"/>
+  <text x="600" y="225" text-anchor="middle" font-size="18" fill="white">🏖️</text>
+  
+  <!-- Korea -->
+  <circle cx="580" cy="120" r="15" fill="#ff9a9e" stroke="white" stroke-width="3"/>
+  <text x="580" y="125" text-anchor="middle" font-size="18" fill="white">🏛️</text>
+  
+  <!-- Thailand -->
+  <circle cx="520" cy="180" r="15" fill="#ff9a9e" stroke="white" stroke-width="3"/>
+  <text x="520" y="185" text-anchor="middle" font-size="18" fill="white">🛕</text>
+  
+  <!-- Labels -->
+  <text x="620" y="110" text-anchor="middle" font-size="12" fill="#8B4B8B" font-weight="bold">北海道</text>
+  <text x="600" y="250" text-anchor="middle" font-size="12" fill="#8B4B8B" font-weight="bold">沖縄</text>
+  <text x="580" y="150" text-anchor="middle" font-size="12" fill="#8B4B8B" font-weight="bold">韓国</text>
+  <text x="520" y="210" text-anchor="middle" font-size="12" fill="#8B4B8B" font-weight="bold">タイ</text>
+</svg>

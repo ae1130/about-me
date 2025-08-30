@@ -145,7 +145,7 @@ section {
     padding: 2rem;
 }
 
-/* 世界地図背景 */
+/* アジア地図背景 */
 .map-background {
     position: relative;
     width: 100%;
@@ -159,6 +159,22 @@ section {
     overflow: hidden;
     box-shadow: 0 15px 40px rgba(153, 204, 255, 0.3);
     backdrop-filter: blur(10px);
+}
+
+/* 大陸の輪郭 */
+.continent {
+    position: absolute;
+    border-radius: 10px;
+    opacity: 0.6;
+}
+
+.asia-continent {
+    top: 20%;
+    left: 55%;
+    width: 35%;
+    height: 50%;
+    background: linear-gradient(135deg, #f5d795 0%, #e6b85c 100%);
+    clip-path: polygon(0% 0%, 80% 0%, 100% 30%, 90% 80%, 60% 100%, 20% 90%, 0% 60%);
 }
 
 /* 大陸の輪郭 */
