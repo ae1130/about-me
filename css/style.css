@@ -184,22 +184,15 @@ section {
     position: relative;
     width: 100%;
     height: 400px; /* 高さを少し低くして統計情報が見えるように */
-    background: radial-gradient(circle at 30% 30%,
-        #E0F6FF 0%,   /* 淡い空色 */
-        #B3E5FC 20%,  /* 薄い水色 */
-        #81D4FA 40%,  /* 優しい青 */
-        #4FC3F7 60%,  /* 中間の青 */
-        #29B6F6 80%,  /* 少し濃い青 */
-        #03A9F4 100%  /* 爽やかな青 */
-    );
+    background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
     border-radius: 50% 50% 40% 40%; /* 下側を少し平らに */
     overflow: visible; /* overflowをvisibleに変更 */
     box-shadow:
-        0 20px 50px rgba(3, 169, 244, 0.2),
+        0 20px 50px rgba(255, 154, 158, 0.2),
         inset 0 0 50px rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     position: relative;
-    border: 3px solid #E1F5FE;
+    border: 3px solid #FFE4E1;
     margin-bottom: 1rem; /* 統計情報との間隔を確保 */
 }
 
@@ -235,12 +228,7 @@ section {
     left: 40%;
     width: 45%;
     height: 60%;
-    background: linear-gradient(135deg,
-        #FFF8E1 0%,   /* 淡いクリーム */
-        #FFF3E0 30%,  /* 薄いベージュ */
-        #FBE9E7 60%,  /* 優しいピンク */
-        #FCE4EC 100%  /* 淡いピンク */
-    );
+    background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
     clip-path: polygon(
         /* 北海道 */
         25% 8%,   /* 宗谷岬 */
@@ -290,8 +278,8 @@ section {
         50% 55%,  /* 鹿児島南端 */
         45% 50%   /* 鹿児島北端 */
     );
-    box-shadow: 0 5px 15px rgba(252, 228, 236, 0.3);
-    border: 2px solid rgba(252, 228, 236, 0.5);
+    box-shadow: 0 5px 15px rgba(255, 154, 158, 0.3);
+    border: 2px solid rgba(255, 154, 158, 0.5);
 }
 
 /* 大陸の輪郭 */
@@ -493,10 +481,10 @@ section {
     justify-content: center;
     gap: 2rem;
     padding: 2rem;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(3, 169, 244, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 154, 158, 0.1) 100%);
     border-radius: 25px;
     backdrop-filter: blur(15px);
-    box-shadow: 0 10px 30px rgba(3, 169, 244, 0.15);
+    box-shadow: 0 10px 30px rgba(255, 154, 158, 0.15);
     position: relative;
 }
 
@@ -522,10 +510,10 @@ section {
     text-align: center;
     padding: 1.5rem;
     border-radius: 20px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(224, 247, 255, 0.8) 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 245, 245, 0.8) 100%);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     min-width: 120px;
-    box-shadow: 0 5px 15px rgba(3, 169, 244, 0.15);
+    box-shadow: 0 5px 15px rgba(255, 154, 158, 0.15);
     position: relative;
     overflow: hidden;
 }
@@ -547,15 +535,15 @@ section {
 
 .stat-item:hover {
     transform: translateY(-8px) scale(1.05);
-    box-shadow: 0 15px 35px rgba(255, 105, 180, 0.4);
+    box-shadow: 0 15px 35px rgba(255, 154, 158, 0.4);
 }
 
 .stat-number {
     display: block;
     font-size: 2.5rem;
     font-weight: 800;
-    color: #03A9F4;
-    text-shadow: 0 2px 4px rgba(3, 169, 244, 0.3);
+    color: #e8839b;
+    text-shadow: 0 2px 4px rgba(232, 131, 155, 0.3);
     margin-bottom: 0.5rem;
     position: relative;
     z-index: 2;
@@ -563,7 +551,7 @@ section {
 
 .stat-label {
     font-size: 1rem;
-    color: #4FC3F7;
+    color: #e8839b;
     font-weight: 600;
     position: relative;
     z-index: 2;
